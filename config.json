@@ -1,0 +1,21 @@
+{
+    "db_host": "localhost",
+    "db_port": 3306,
+    "db_user": "root",
+    "db_password": "",
+    "db_name": "mautic_db_name",
+    "mautic_url": "https://example.com/mautic/",
+    "subject": "Report",
+    "smtp": {
+        "host": "mail.example.com",
+        "port": "587",
+        "username": "root@example.com",
+        "password": "password",
+        "secure": false
+    },
+    "mail": {
+        "from": "me@example.com",
+        "fromName": "Example",
+        "to": "info@example.com"
+    }
+}

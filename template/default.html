@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ subject }}</title>
+    <style type="text/css">
+        html, body {
+            background-color: #f1f1f1;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            background-color: #ffffff;
+        }
+
+        .title {
+            background-color: #928f8f;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 10px;
+        }
+
+        .lead td {
+            border: 1px solid #dddddd;
+            padding: 30px 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <table border="0" align="center" width="580" bgcolor="#ffffff" class="container" cellspacing="0" cellpadding="5">
+        <tr>
+            <td width="100%" align="center" class="title" colspan="2">
+                Contacts
+            </td>
+        </tr>
+        {{#leads }}
+            <tr class="lead">
+                <td width="70%">
+                    <a href="{{ profile_url }}">{{ firstname }} {{ lastname }}</a> <br>
+                    Position: {{ position }} <br>
+                    <a href="mailto:{{ email }}">{{ email }}</a> <br>
+                    Web: <a href="{{ website }}">{{ website }}</a> <br>
+                    City: {{ city }} <br>
+                    Phone: {{ phone }}
+                </td>
+                
+                <td width="30%" align="center">
+                    <p>{{ company }}</p>
+                    <p><font color="red">Points:</font> {{ points }}</p>
+                </td>
+            </tr>
+        {{/leads }}
+
+    </table>
+</body>
+</html>
